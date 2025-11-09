@@ -1,12 +1,12 @@
 services:
   - type: web
     name: moviebase
-    env: java
+    runtime: java
     plan: free
     buildCommand: ./mvnw clean package -DskipTests
     startCommand: java -jar target/*.jar
     envVars:
       - key: JAVA_VERSION
-        value: 21
+        value: 17
       - key: SPRING_PROFILES_ACTIVE
         value: production
